@@ -40,7 +40,7 @@ app.get('/api/dayz-time', async (req, res) => {
             raw: state.raw
         });
 
-    } class (error) {
+    } catch (error) {
         console.error("Fehler bei der UDP-Abfrage:", error.message);
         res.status(500).json({
             success: false,
