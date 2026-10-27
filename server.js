@@ -98,7 +98,7 @@ setInterval(async () => {
         if (!r) { r = await queryViaGameDig(); }
         if (r && typeof r.players === 'number') {
             recordHistoryPoint(r.players);
-            console.log(`[Hintergrund-Historie] Messpunkt gespeichert: ${r.players} Spieler um ${new().toLocaleTimeString()}`);
+            console.log(`[Hintergrund-Historie] Messpunkt gespeichert: ${r.players} Spieler um ${new Date().toLocaleTimeString()}`);
         }
     } catch (err) {}
 }, 15 * 60 * 1000);
